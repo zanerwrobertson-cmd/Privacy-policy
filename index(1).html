@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms & Conditions — Achieve</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #1a1a1a;
+      --border: #e2ddd6;
+      --link: #2a52be;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .header-badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .hero {
+      background: var(--accent);
+      color: #fff;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-meta {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.85rem;
+    }
+
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      padding: 0 2rem;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 80px;
+      padding: 3rem 2rem 3rem 0;
+      border-right: 1px solid var(--border);
+    }
+
+    .toc-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      margin-bottom: 0.35rem;
+    }
+
+    .toc ol li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+      transition: color 0.2s;
+      line-height: 1.4;
+    }
+
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.65rem;
+      color: #ccc;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    .toc ol li a:hover { color: var(--text); }
+
+    .content {
+      padding: 4rem 0 4rem 3rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .section:last-child { border-bottom: none; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.05s; }
+    .section:nth-child(2)  { animation-delay: 0.10s; }
+    .section:nth-child(3)  { animation-delay: 0.15s; }
+    .section:nth-child(4)  { animation-delay: 0.20s; }
+    .section:nth-child(5)  { animation-delay: 0.25s; }
+    .section:nth-child(6)  { animation-delay: 0.30s; }
+    .section:nth-child(7)  { animation-delay: 0.35s; }
+    .section:nth-child(8)  { animation-delay: 0.40s; }
+    .section:nth-child(9)  { animation-delay: 0.45s; }
+    .section:nth-child(10) { animation-delay: 0.50s; }
+    .section:nth-child(11) { animation-delay: 0.55s; }
+    .section:nth-child(12) { animation-delay: 0.60s; }
+    .section:nth-child(13) { animation-delay: 0.65s; }
+    .section:nth-child(14) { animation-delay: 0.70s; }
+    .section:nth-child(15) { animation-delay: 0.75s; }
+
+    .section-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 2rem 0 0.75rem;
+      color: var(--text);
+    }
+
+    p {
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    a { color: var(--link); }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    li { margin-bottom: 0.5rem; }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    .callout {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .callout p { margin-bottom: 0; color: #444; font-size: 0.9rem; }
+
+    .sms-box {
+      background: var(--accent);
+      color: #fff;
+      padding: 1.75rem 2rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+
+    .sms-box p { color: rgba(255,255,255,0.75); margin-bottom: 0.4rem; font-size: 0.9rem; }
+    .sms-box p:last-child { margin-bottom: 0; }
+    .sms-box strong { color: #fff; }
+
+    .contact-block {
+      background: var(--accent);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 4px;
+      margin-top: 1.5rem;
+    }
+
+    .contact-block p { color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; }
+    .contact-block a { color: #fff; }
+    .contact-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: var(--accent);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      margin-top: 4rem;
+    }
+
+    footer a { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; padding: 0 1.25rem; }
+      .toc { display: none; }
+      .content { padding: 3rem 0; }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">Achieve</a>
+  <span class="header-badge">Legal</span>
+</header>
+
+<div class="hero">
+  <p class="hero-label">Legal Document</p>
+  <h1>Terms & Conditions</h1>
+  <p class="hero-meta">Last updated February 28, 2026 &nbsp;·&nbsp; Achieve</p>
+</div>
+
+<div class="layout">
+
+  <nav class="toc">
+    <p class="toc-label">Contents</p>
+    <ol>
+      <li><a href="#s1">Agreement to Terms</a></li>
+      <li><a href="#s2">Services Description</a></li>
+      <li><a href="#s3">SMS Messaging & Twilio</a></li>
+      <li><a href="#s4">Consent to Receive Messages</a></li>
+      <li><a href="#s5">Opt-Out Rights</a></li>
+      <li><a href="#s6">Acceptable Use</a></li>
+      <li><a href="#s7">Client Responsibilities</a></li>
+      <li><a href="#s8">AI Automation Disclaimer</a></li>
+      <li><a href="#s9">Payment & Fees</a></li>
+      <li><a href="#s10">Intellectual Property</a></li>
+      <li><a href="#s11">Limitation of Liability</a></li>
+      <li><a href="#s12">Termination</a></li>
+      <li><a href="#s13">Governing Law</a></li>
+      <li><a href="#s14">Changes to Terms</a></li>
+      <li><a href="#s15">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <main class="content">
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+      <p class="section-number">01</p>
+      <h2>Agreement to Terms</h2>
+      <p>By accessing or using the services provided by <strong>Achieve</strong> ("we," "us," or "our"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
+      <p>These Terms and Conditions apply to all clients, users, and individuals who access or use Achieve's AI automation services, including but not limited to our missed call text-back automation, lead generation automation, and outreach automation systems.</p>
+      <div class="callout">
+        <p>By engaging Achieve's services, signing a service agreement, or allowing our systems to operate on your behalf, you confirm that you have read, understood, and agree to these Terms and Conditions.</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+      <p class="section-number">02</p>
+      <h2>Services Description</h2>
+      <p>Achieve provides AI-powered automation services for businesses, including:</p>
+      <ul>
+        <li><strong>Missed Call Text-Back Automation</strong> — Automated SMS responses sent to callers when a business misses their call, powered by Twilio's messaging infrastructure.</li>
+        <li><strong>Lead Generation Automation</strong> — Automated scraping, filtering, and delivery of business lead data using third-party tools.</li>
+        <li><strong>Outreach Automation</strong> — AI-generated personalized outreach messages delivered via email or SMS on behalf of clients.</li>
+        <li><strong>Workflow Automation</strong> — Custom n8n-based automation workflows connecting various third-party platforms and APIs.</li>
+        <li><strong>AI Content Tools</strong> — Hook analyzers, content planners, and other AI-powered tools built for specific client use cases.</li>
+      </ul>
+      <p>All services are delivered through a combination of third-party platforms including but not limited to Twilio, OpenAI, n8n, Apify, and Google services. Achieve acts as an integrator and is not the provider of the underlying infrastructure.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+      <p class="section-number">03</p>
+      <h2>SMS Messaging & Twilio</h2>
+      <p>Achieve uses <strong>Twilio</strong> as its SMS and voice infrastructure provider to power missed call text-back and outreach messaging services. By engaging our SMS automation services, you acknowledge and agree to the following:</p>
+      <h3>How It Works</h3>
+      <p>When a customer calls a business phone number enrolled in our missed call text-back service and the call goes unanswered, our system automatically sends a single SMS message to the caller's phone number. This message is sent on behalf of the business client and may be AI-generated.</p>
+      <div class="sms-box">
+        <p><strong>Example automated message:</strong></p>
+        <p>"Hey! Sorry we missed your call — we'd love to help. What can we do for you? Reply any time and we'll get back to you shortly."</p>
+      </div>
+      <h3>Message Frequency</h3>
+      <p>For missed call text-back services, end-users (callers) will receive a maximum of one (1) automated SMS per missed call event. Message frequency may vary for other outreach campaigns based on the specific service configuration agreed upon with the client.</p>
+      <h3>Message & Data Rates</h3>
+      <p>Standard message and data rates may apply to end-users receiving SMS messages through our system. These rates are determined by the end-user's mobile carrier and are outside of Achieve's control.</p>
+      <h3>Twilio Compliance</h3>
+      <p>All SMS messaging conducted through Achieve's services is subject to Twilio's Acceptable Use Policy and Messaging Policy. Clients agree not to use Achieve's services in any manner that would violate Twilio's terms of service or applicable telecommunications laws including the Telephone Consumer Protection Act (TCPA) and Canadian Anti-Spam Legislation (CASL).</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+      <p class="section-number">04</p>
+      <h2>Consent to Receive Messages</h2>
+      <p>Achieve's missed call text-back service operates on the basis of <strong>implied consent</strong>. By initiating a phone call to a business number enrolled in our service, the caller implicitly consents to receive a single automated SMS response acknowledging their missed call.</p>
+      <div class="callout">
+        <p>Implied consent is established through the end-user's own voluntary action of placing a phone call to the business. The automated text-back is a direct response to that call attempt, not unsolicited marketing communication.</p>
+      </div>
+      <h3>Business Client Responsibility</h3>
+      <p>Business clients who engage Achieve's outreach automation or marketing SMS services are solely responsible for ensuring they have obtained proper express written consent from recipients prior to sending any marketing messages. Achieve provides the technical infrastructure only — the client is the message sender of record and bears full legal responsibility for consent compliance.</p>
+      <h3>No Sharing of Consent Data</h3>
+      <p>SMS opt-in data and consent records will not be shared with third parties or affiliates for marketing or promotional purposes. This information is used solely to operate the agreed-upon service.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+      <p class="section-number">05</p>
+      <h2>Opt-Out Rights</h2>
+      <p>All end-users who receive SMS messages through Achieve's systems have the right to opt out at any time. To stop receiving messages, end-users may reply with any of the following keywords:</p>
+      <ul>
+        <li><strong>STOP</strong></li>
+        <li><strong>CANCEL</strong></li>
+        <li><strong>UNSUBSCRIBE</strong></li>
+        <li><strong>QUIT</strong></li>
+        <li><strong>END</strong></li>
+      </ul>
+      <p>Upon receiving an opt-out request, the system will send one final confirmation message and immediately cease sending further messages to that number. Achieve's systems automatically honor opt-out requests in compliance with TCPA and CASL requirements.</p>
+      <p>To opt back in after opting out, end-users may reply <strong>START</strong> or <strong>UNSTOP</strong>.</p>
+      <p>For help at any time, end-users may reply <strong>HELP</strong> to receive support contact information.</p>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+      <p class="section-number">06</p>
+      <h2>Acceptable Use</h2>
+      <p>Clients and users of Achieve's services agree not to use our automation systems for any of the following purposes:</p>
+      <ul>
+        <li>Sending spam, unsolicited bulk messages, or communications to individuals who have not provided consent</li>
+        <li>Sending messages that are deceptive, misleading, or fraudulent in nature</li>
+        <li>Harassment, threats, or abusive communications of any kind</li>
+        <li>Violating any applicable federal, provincial, state, or local law or regulation</li>
+        <li>Circumventing or attempting to circumvent TCPA, CASL, or any other telecommunications regulations</li>
+        <li>Sending prohibited content including adult content, hate speech, illegal goods or services, or content that violates Twilio's Acceptable Use Policy</li>
+        <li>Impersonating any person, business, or entity</li>
+        <li>Scraping, collecting, or storing personal data in violation of applicable privacy laws</li>
+      </ul>
+      <p>Achieve reserves the right to immediately suspend or terminate service to any client found to be in violation of these acceptable use guidelines without refund.</p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+      <p class="section-number">07</p>
+      <h2>Client Responsibilities</h2>
+      <p>By engaging Achieve's services, clients agree to the following responsibilities:</p>
+      <ul>
+        <li><strong>Legal Compliance.</strong> Clients are solely responsible for ensuring their use of Achieve's automation services complies with all applicable laws in their jurisdiction, including telecommunications law, privacy law, and consumer protection regulations.</li>
+        <li><strong>Accurate Information.</strong> Clients must provide accurate business information, phone numbers, and contact details. Achieve is not liable for errors resulting from inaccurate information provided by the client.</li>
+        <li><strong>Account Security.</strong> Clients are responsible for maintaining the security of any credentials, API keys, or access tokens associated with their automation systems.</li>
+        <li><strong>Third-Party Accounts.</strong> Clients are responsible for maintaining their own Twilio, OpenAI, and other third-party accounts in good standing and ensuring those accounts comply with the respective platform's terms of service.</li>
+        <li><strong>Content Approval.</strong> Clients are responsible for reviewing and approving any AI-generated message content before it is deployed at scale. Achieve recommends all clients review sample outputs prior to full automation.</li>
+        <li><strong>Monitoring.</strong> Clients are responsible for monitoring the performance and compliance of their automation workflows and promptly notifying Achieve of any issues.</li>
+      </ul>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" id="s8">
+      <p class="section-number">08</p>
+      <h2>AI Automation Disclaimer</h2>
+      <p>Achieve's services utilize artificial intelligence technologies, including large language models (LLMs) provided by third parties such as OpenAI, to generate content and automate workflows. By using our services, you acknowledge the following:</p>
+      <ul>
+        <li><strong>AI-Generated Content.</strong> Messages, emails, and other content generated by AI may not always be perfectly accurate, appropriate, or suited to every context. Achieve does not guarantee the accuracy, completeness, or suitability of AI-generated content.</li>
+        <li><strong>Human Review Recommended.</strong> We strongly recommend that clients review AI-generated content before deploying it to customers, especially for sensitive communications.</li>
+        <li><strong>No Guarantee of Results.</strong> Achieve makes no guarantees regarding the performance, response rates, or business outcomes resulting from the use of our automation services. Results may vary based on factors outside of our control including market conditions, audience quality, and message content.</li>
+        <li><strong>Third-Party AI Providers.</strong> AI processing may be performed by third-party providers such as OpenAI. By using our services, you consent to your data being processed by these providers in accordance with their own terms of service and privacy policies.</li>
+      </ul>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section" id="s9">
+      <p class="section-number">09</p>
+      <h2>Payment & Fees</h2>
+      <p>Service fees are agreed upon between Achieve and the client prior to the commencement of services. The following terms apply to all payment arrangements:</p>
+      <ul>
+        <li><strong>Fees.</strong> Service fees are as outlined in your individual service agreement or proposal. Fees may be charged on a monthly retainer basis, project basis, or per-use basis depending on the service.</li>
+        <li><strong>Third-Party Costs.</strong> Clients may be responsible for their own third-party platform costs (e.g., Twilio SMS costs, OpenAI API usage, Apify credits) in addition to Achieve's service fee, depending on the arrangement agreed upon.</li>
+        <li><strong>Late Payment.</strong> Achieve reserves the right to suspend services for accounts with outstanding unpaid invoices beyond 14 days of the due date.</li>
+        <li><strong>Refunds.</strong> Due to the nature of digital services and automation setup work, fees are generally non-refundable once services have commenced. Refund requests will be evaluated on a case-by-case basis.</li>
+        <li><strong>Price Changes.</strong> Achieve reserves the right to change service pricing with 30 days' written notice to existing clients.</li>
+      </ul>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section" id="s10">
+      <p class="section-number">10</p>
+      <h2>Intellectual Property</h2>
+      <p>All automation workflows, systems, code, prompts, and processes developed by Achieve remain the intellectual property of Achieve unless explicitly agreed otherwise in a separate written agreement.</p>
+      <p>Clients retain ownership of their own business data, contact lists, and content. Achieve does not claim ownership over any client-provided materials.</p>
+      <p>AI-generated content produced by Achieve's systems on behalf of a client is considered work product delivered to that client, and ownership transfers to the client upon delivery and full payment.</p>
+      <p>Clients may not resell, redistribute, or sublicense Achieve's proprietary workflows or automation systems without express written permission from Achieve.</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section" id="s11">
+      <p class="section-number">11</p>
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, Achieve shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of our services, including but not limited to:</p>
+      <ul>
+        <li>Loss of revenue, profits, or business opportunities</li>
+        <li>Data loss or corruption</li>
+        <li>Service interruptions or downtime caused by third-party platforms (Twilio, OpenAI, n8n, etc.)</li>
+        <li>Regulatory fines or legal costs arising from the client's own non-compliance</li>
+        <li>Errors, inaccuracies, or unintended outputs from AI-generated content</li>
+        <li>Unauthorized access to client accounts or data due to client negligence</li>
+      </ul>
+      <p>Achieve's total liability to any client for any claim arising out of or relating to these Terms or our services shall not exceed the total amount paid by that client to Achieve in the three (3) months preceding the claim.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section" id="s12">
+      <p class="section-number">12</p>
+      <h2>Termination</h2>
+      <p>Either party may terminate the service arrangement with written notice. The following terms apply upon termination:</p>
+      <ul>
+        <li><strong>Client Termination.</strong> Clients may terminate their service agreement with 14 days written notice. Any fees owed up to the date of termination remain payable.</li>
+        <li><strong>Achieve Termination.</strong> Achieve reserves the right to terminate services immediately and without notice in the event of a violation of these Terms, non-payment, or conduct that exposes Achieve or its infrastructure to legal risk.</li>
+        <li><strong>Effect of Termination.</strong> Upon termination, Achieve will cease all automation workflows on behalf of the client. The client is responsible for updating or deactivating any third-party integrations (Twilio numbers, API keys, etc.) associated with the service.</li>
+        <li><strong>Data.</strong> Upon request, Achieve will provide a reasonable data export within 14 days of termination. After 30 days post-termination, client data may be permanently deleted from Achieve's systems.</li>
+      </ul>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="section" id="s13">
+      <p class="section-number">13</p>
+      <h2>Governing Law</h2>
+      <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the Province of <strong>Ontario, Canada</strong>, and the federal laws of Canada applicable therein, without regard to conflict of law principles.</p>
+      <p>Any disputes arising out of or relating to these Terms or Achieve's services shall first be attempted to be resolved through good-faith negotiation between the parties. If negotiation fails, disputes shall be submitted to binding arbitration in Ontario, Canada.</p>
+      <p>If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect.</p>
+    </div>
+
+    <!-- Section 14 -->
+    <div class="section" id="s14">
+      <p class="section-number">14</p>
+      <h2>Changes to Terms</h2>
+      <p>Achieve reserves the right to modify these Terms and Conditions at any time. When changes are made, we will update the "Last updated" date at the top of this page.</p>
+      <p>For material changes, we will make reasonable efforts to notify active clients via email or through our service communication channels at least 14 days before the changes take effect.</p>
+      <p>Your continued use of Achieve's services after any changes to these Terms constitutes your acceptance of the updated Terms. If you do not agree to the updated Terms, you should discontinue use of our services and notify us in writing.</p>
+    </div>
+
+    <!-- Section 15 -->
+    <div class="section" id="s15">
+      <p class="section-number">15</p>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+      <div class="contact-block">
+        <p class="contact-name">Achieve</p>
+        <p>237 Sawmill Valley Drive</p>
+        <p>Newmarket, Ontario L3X 2W4</p>
+        <p>Canada</p>
+        <p style="margin-top:1rem;"><a href="mailto:zane.rw.robertson@gmail.com">zane.rw.robertson@gmail.com</a></p>
+        <p>416-660-3723</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2026 Achieve. &nbsp;·&nbsp; <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; Terms & Conditions</p>
+</footer>
+
+</body>
+</html>
